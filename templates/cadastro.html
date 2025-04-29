@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Cadastro de Adotantes</h1>
+<form method="POST">
+    <input type="text" name="nome" placeholder="Nome" required><br>
+    <input type="text" name="cpf" placeholder="CPF"><br>
+    <input type="text" name="telefone" placeholder="Telefone"><br>
+    <input type="email" name="email" placeholder="Email"><br>
+    <input type="text" name="endereco" placeholder="Endereço"><br>
+    <input type="text" name="nome_animal" placeholder="Nome do Animal"><br>
+    <select name="especie">
+        <option value="Canino">Canino</option>
+        <option value="Felino">Felino</option>
+    </select><br>
+    <input type="text" name="microchip" placeholder="Microchip"><br>
+    <input type="date" name="data"><br>
+    <textarea name="observacoes" placeholder="Observações"></textarea><br>
+    <button type="submit">Cadastrar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+{% block title %}Cadastro de Adotante{% endblock %}
+{% block content %}
+<h2>Cadastro de Adotante</h2>
+<form method="POST">
+  Nome: <input type="text" name="nome"><br>
+  CPF: <input type="text" name="cpf"><br>
+  Telefone: <input type="text" name="telefone"><br>
+  Email: <input type="email" name="email"><br>
+  Endereço: <input type="text" name="endereco"><br>
+  Nome do animal: <input type="text" name="animal"><br>
+  Data da adoção: <input type="date" name="data"><br>
+  Observações: <textarea name="observacoes"></textarea><br>
+  <input type="submit" value="Salvar 🐶">
+</form>
+{% endblock %}

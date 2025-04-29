@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Relatório de Adoções</h1>
+
+<form method="POST">
+    De: <input type="date" name="inicio" required>
+    Até: <input type="date" name="fim" required>
+    <button type="submit">Gerar Relatório</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div style="background-color: #ffc107; padding: 10px; margin: 10px 0;">{{ messages[0] }}</div>
+  {% endif %}
+{% endwith %}
+
+{% if grafico %}
+    <h2>Gráfico:</h2>
+    <img src="{{ grafico }}" alt="Gráfico">
+{% endif %}
+
+{% if dados %}
+    <h2>Dados:</h2>
+    <ul>
+    {% for d in dados %}
+        <li>{{ d[0] }} adotou {{ d[1] }} em {{ d[2] }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

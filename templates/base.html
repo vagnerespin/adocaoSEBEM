@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adoção SEBEM</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            background: url("/static/img/SEBEM_logo.png") no-repeat center center fixed;
+            background-size: 40%;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            margin: 50px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/cadastro">Cadastrar Adotante</a>
+        <a href="/relatorios">Relatórios</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+

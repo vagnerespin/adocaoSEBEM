@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block title %}Restaurar Banco{% endblock %}
+{% block content %}
+<h2>Restaurar Backup do Banco</h2>
+<form method="POST" enctype="multipart/form-data">
+  Selecione o arquivo .db: <input type="file" name="arquivo" accept=".db">
+  <input type="submit" value="Restaurar">
+</form>
+{% endblock %}
